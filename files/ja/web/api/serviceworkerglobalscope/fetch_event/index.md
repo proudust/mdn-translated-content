@@ -33,7 +33,7 @@ onfetch = (event) => {};
 
 - {{domxref("Cache")}} インターフェースから取得したレスポンスのローカルキャッシュ
 - {{domxref("Response.json()")}} や {{domxref("Response.Response()", "Response()")}} コンストラクタなどのメソッドでサービスワーカーが合成したレスポンス。
-- {{domxref("Response.error_static()", "Response.error()")}} による ネットワークエラー。これは `fetch()` 呼び出しを拒否させます。
+- {{domxref("Response.error_static()", "Response.error()")}} による ネットワークエラー。この場合 `fetch()` のプロミスは拒否されます。
 
 `respondWith()` メソッドは、一つのリクエストに対して一度だけ呼び出すことができます。複数の `fetch` イベントリスナーが設定された場合、`respondWith()` が呼び出されるまで、登録された順に呼び出されます。
 
@@ -128,6 +128,6 @@ self.addEventListener("fetch", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- {{domxref("fetch()")}} method
-- {{domxref("Request")}} interface
-- {{domxref("Response")}} interface
+- {{domxref("fetch()")}} メソッド
+- {{domxref("Request")}} インターフェース
+- {{domxref("Response")}} インターフェース
